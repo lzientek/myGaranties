@@ -1,0 +1,14 @@
+<h1>Garanties</h1>
+<ul>
+<% @garanties.each do |garanty| %>
+<li>  <%= garanty.product_name  %>  (<%= garanty.product_price  %>)</li>
+<% end %>
+</ul>
+
+<h3>Add a new one</h3>
+
+<%= form_tag "/garanties", method: :post do %>
+  <input  type="text" name="product_name" />
+  <br/>
+  <button>Envoyer</button>
+<% end %>

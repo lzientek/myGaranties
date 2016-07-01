@@ -1,0 +1,2 @@
+module GarantiesHelper
+end
