@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160701203549) do
+ActiveRecord::Schema.define(version: 20160702104947) do
 
   create_table "garanties", force: :cascade do |t|
     t.string   "product_name"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 20160701203549) do
     t.datetime "buy_date"
     t.datetime "creation_date"
     t.datetime "modification_date"
+    t.integer  "user_id"
+  end
+
+  add_index "garanties", ["user_id"], name: "index_garanties_on_user_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "lastname"
+    t.string   "firstname"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "creation_date"
+    t.datetime "last_connection_date"
   end
 
 end
