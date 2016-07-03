@@ -6,7 +6,13 @@ class GarantiesController < ApplicationController
 
 
   def create
-    Garanty.create product_name: params[:product_name]
-    redirect_to "/garanties"  
+    g = Garanty.create product_name: params[:product_name]
+    if g
+      @garanty = g
+      @garanties = Garanty.all
+      render :index
+    else
+      redirect_to "/garanties"
+    end
   end
 end

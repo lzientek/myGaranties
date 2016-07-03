@@ -9,6 +9,9 @@
 
 <%= form_tag "/garanties", method: :post do %>
   <input  type="text" name="product_name" />
+  <% if @garanty %>
+    <%= @garanty.errors[:product_name].join(',') %>
+  <%end%>
   <br/>
   <button>Envoyer</button>
 <% end %>
