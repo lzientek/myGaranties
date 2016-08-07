@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
+  layout "front"
   def home
-    @variable = 4
   end
 end
