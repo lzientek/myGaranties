@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>My Garanties - home</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="site-wrapper">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>My Garanties - home</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="site-wrapper">
 
-    <div class="site-wrapper-inner">
+            <div class="site-wrapper-inner">
 
-      <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand"><%= t 'global.title' %></h3>
+                        <nav class="nav nav-masthead">
+                            <a class="nav-link active" href="#"><%=t 'global.home'%></a>
+                            <a class="nav-link" href="#"><%= t 'global.login'%></a>
+                            <a class="nav-link" href="#">Contact</a>
+                        </nav>
+                    </div>
+                </div>
 
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand"><%= t('global_title') %></h3>
-            <nav class="nav nav-masthead">
-              <a class="nav-link active" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Contact</a>
-            </nav>
-          </div>
+                <div class="cover-container">
+
+                    <%= yield %>
+                </div>
+                Error: Source sample is missing.
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Cover template for
+                            <a href="http://getbootstrap.com/">Bootstrap</a>, by
+                            <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-
-        <%= yield %>
-
-        <div class="mastfoot">
-          <div class="inner">
-            <p>Cover template for <a href="http://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</body>
+    </body>
 </html>

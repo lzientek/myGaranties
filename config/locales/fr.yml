@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fr:
-  global_title: "Mes garanties"
+  global:
+    title: "Mes garanties"
+    login: "Se connecter"
+    home: "Accueil"
