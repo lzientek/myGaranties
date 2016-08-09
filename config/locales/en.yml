@@ -24,3 +24,6 @@ en:
     title: "My garanties"
     login: "Log In"
     home: "Home"
+    contact: "Contact"
+  footer:
+    text: "Website My garanties created by "

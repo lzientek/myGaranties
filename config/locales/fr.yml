@@ -24,3 +24,6 @@ fr:
     title: "Mes garanties"
     login: "Se connecter"
     home: "Accueil"
+    contact: "Contact"
+  footer:
+    text: "Le site mes garanties créé par "

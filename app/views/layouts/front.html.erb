@@ -16,23 +16,21 @@
                     <div class="inner">
                         <h3 class="masthead-brand"><%= t 'global.title' %></h3>
                         <nav class="nav nav-masthead">
-                            <a class="nav-link active" href="#"><%=t 'global.home'%></a>
-                            <a class="nav-link" href="#"><%= t 'global.login'%></a>
-                            <a class="nav-link" href="#">Contact</a>
+                            <%= link_to t('global.home'), '/',html_options={class: current_page?('/') ? 'nav-link active' : 'nav-link'} %>
+                            <%= link_to t('global.login'), '/users/sign_in',html_options={class: current_page?('/users/sign_in') ? 'nav-link active' : 'nav-link'} %>
+                            <%= link_to t('global.contact'), '/#',html_options={class: current_page?('/contact') ? 'nav-link active' : 'nav-link'} %>
                         </nav>
                     </div>
                 </div>
 
                 <div class="cover-container">
-
                     <%= yield %>
                 </div>
-                Error: Source sample is missing.
+
                 <div class="mastfoot">
                     <div class="inner">
-                        <p>Cover template for
-                            <a href="http://getbootstrap.com/">Bootstrap</a>, by
-                            <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                        <p><%= t 'footer.text' %>
+                            <a href="http://lucas.zientek.fr/">Lucas ZIENTEK</a>.</p>
                     </div>
                 </div>
 

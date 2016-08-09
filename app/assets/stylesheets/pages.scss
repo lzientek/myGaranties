@@ -4,21 +4,12 @@
 /*
  * Globals
  */
+@import "colors";
 /* Links */
 a,
 a:focus,
 a:hover {
-    color: #fff;
-}
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:focus,
-.btn-secondary:hover {
-    color: #333;
-    text-shadow: none;
-    /* Prevent inheritance from `body` */
-    background-color: #fff;
-    border: 0.05rem solid #fff;
+    color: $primary-text;
 }
 /*
  * Base structure
@@ -29,9 +20,8 @@ html {
     background-color: #333;
 }
 body {
-    color: #fff;
+    color: $primary-text;
     text-align: center;
-    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,.13);
 }
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -39,17 +29,15 @@ body {
     height: 100%;
     /* For at least Firefox */
     min-height: 100%;
-    color: #fff;
     background-image: image-url("background-zoom.png");
     background-position: center;
 }
 .site-wrapper-inner {}
 .cover-container {
-    width: 100%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 2.5rem;
-    color: rgb(0, 165, 180);
+    color: $primary-text-dark;
 }
 /* Padding for spacing */
 .inner {
@@ -60,34 +48,35 @@ body {
  */
 .masthead {
     padding-bottom: 1.8rem;
-    background-color: #07b2c2;
+    background-color: $primary-color;
     width: 100%;
     position: static;
     top: 0;
-    -webkit-box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.26);
-    -moz-box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.26);
-    box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.26);
+    -webkit-box-shadow: 0 3px 5px 0 $box-shadow-color;
+    -moz-box-shadow: 0 3px 5px 0 $box-shadow-color;
+    box-shadow: 0 3px 5px 0 $box-shadow-color;
 }
 .masthead-brand {
     margin-bottom: 0;
+    color: $primary-text;
 }
 .nav-masthead .nav-link {
     padding: 0.25rem 0;
     font-weight: bold;
-    color: rgba(255,255,255,.95);
+    color: $primary-text;
     background-color: transparent;
     border-bottom: 0.25rem solid transparent;
 }
 .nav-masthead .nav-link:focus,
 .nav-masthead .nav-link:hover {
-    border-bottom-color: rgba(255,255,255,.25);
+    border-bottom-color: $accent-color;
 }
 .nav-masthead .nav-link + .nav-link {
     margin-left: 1rem;
 }
 .nav-masthead .active {
-    color: #fff;
-    border-bottom-color: #fff;
+    color: $primary-text;
+    border-bottom-color: $accent-color;
 }
 @media (min-width: 48em) {
     .masthead-brand {
@@ -111,7 +100,7 @@ body {
  * Footer
  */
 .mastfoot {
-    color: rgba(255,255,255,.5);
+    color: $secondary-text-dark;
 }
 /*
  * Affix and center
@@ -126,6 +115,7 @@ body {
         vertical-align: middle;
     }
     /* Handle the widths */
+    .cover-container,
     .mastfoot {
         width: 100%;
         /* Must be percentage or pixels for horizontal alignment */
@@ -134,5 +124,8 @@ body {
 @media (min-width: 62em) {
     .mastfoot {
         width: 42rem;
+    }
+    .cover-container {
+        width: 50rem;
     }
 }
